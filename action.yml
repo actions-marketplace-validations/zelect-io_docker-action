@@ -1,4 +1,4 @@
-name: 'Docker Action'
+name: 'Zelect IO Docker Action'
 description: 'Github Action to build and push a Docker image'
 inputs:
   imageName:
