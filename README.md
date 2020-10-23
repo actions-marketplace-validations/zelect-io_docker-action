@@ -31,7 +31,7 @@ docker:
   steps:
     - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets. DOCKER_PASSWORD }}
 
-    - uses: philips-labs/docker-action@master
+    - uses: zelect-io/docker-action@master
       with:
         imageName: hello-world
 ```
@@ -47,7 +47,7 @@ docker:
 
     - run: docker login my-docker-registry.io -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets. DOCKER_PASSWORD }}
 
-    - uses: philips-labs/docker-action@master
+    - uses: zelect-io/docker-action@master
       with:
         imageName: hello-world
         dockerRegistry: my-docker-registry.io
@@ -73,7 +73,7 @@ docker:
       id: login_ecr
       uses: aws-actions/amazon-ecr-login@v1
 
-    - uses: philips-labs/docker-action@master
+    - uses: zelect-io/docker-action@master
       with:
         imageName: hello-world
         dockerRegistry: ${{ steps.login_ecr.outputs.registry }}
